@@ -2,7 +2,7 @@
 CONTAINER_NAME := orca-auv-simulation-container
 DOCKER_IMAGE := ubuntu:jammy
 
-.PHONY: all build_container start_container exec_container clean
+.PHONY: all build_container start_container stop_container exec_container clean
 
 all: build_container
 
@@ -27,6 +27,10 @@ build_container:
 start_container:
 	@echo "Starting existing container: $(CONTAINER_NAME)"
 	docker start $(CONTAINER_NAME)
+
+stop_container:
+	@echo "Stopping existing container: $(CONTAINER_NAME)"
+	docker stop $(CONTAINER_NAME)
 
 exec_container:
 	@echo "Executing a shell inside container: $(CONTAINER_NAME)"
