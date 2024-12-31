@@ -2,7 +2,7 @@
 CONTAINER_NAME := orca-auv-simulation-container
 DOCKER_IMAGE := ubuntu:jammy
 
-.PHONY: all build_container run_container exec_container clean
+.PHONY: all build_container start_container exec_container clean
 
 all: build_container
 
@@ -24,9 +24,9 @@ build_container:
 		apt-get update && \
 		apt-get install -y ignition-fortress"
 
-run_container:
+start_container:
 	@echo "Starting existing container: $(CONTAINER_NAME)"
-	docker start -ai $(CONTAINER_NAME)
+	docker start $(CONTAINER_NAME)
 
 exec_container:
 	@echo "Executing a shell inside container: $(CONTAINER_NAME)"
