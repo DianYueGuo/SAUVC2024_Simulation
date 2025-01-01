@@ -11,6 +11,7 @@ build_container:
 	docker run -dit \
 	    --net=host \
 	    --name $(CONTAINER_NAME) \
+	    --env="DISPLAY=docker.for.mac.host.internal:0" \
 	    $(DOCKER_IMAGE) \
 	    bash
 	@echo "Initializing container: $(CONTAINER_NAME)"
