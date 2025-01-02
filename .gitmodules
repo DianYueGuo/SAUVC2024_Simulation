@@ -1,0 +1,3 @@
+[submodule "webots-server"]
+	path = webots-server
+	url = git@github.com:cyberbotics/webots-server.git
