@@ -1,3 +1,6 @@
 [submodule "webots-server"]
 	path = webots-server
 	url = git@github.com:cyberbotics/webots-server.git
+[submodule "orca_auv_simulation_ros2_ws/src/webots_ros2"]
+	path = orca_auv_simulation_ros2_ws/src/webots_ros2
+	url = https://github.com/cyberbotics/webots_ros2.git
